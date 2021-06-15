@@ -1,0 +1,16 @@
+.nav {
+    width: 600px;
+    background: #ddd;
+    li {
+        float: left;
+        color: white;
+        background: green;
+        &:first-child {
+            color: pink;
+        }
+        &:last-child {
+            background: yellow;
+            text-decoration: underline;
+        }
+    }
+}

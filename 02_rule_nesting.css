@@ -1,0 +1,17 @@
+section {
+  width: 800px;
+  background-color: antiquewhite;
+}
+section > .list {
+  padding: 20px;
+  overflow: hidden;
+}
+section > .list > li {
+  float: left;
+  margin: 20px;
+}
+section > .list > li > a {
+  color: pink;
+  text-decoration: underline;
+  font-size: 20px;
+}

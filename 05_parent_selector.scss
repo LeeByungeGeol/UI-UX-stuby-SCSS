@@ -1,0 +1,26 @@
+// nav 배경색
+// nav>#nav 오른쪽으로 붙이기
+// nav>#nav>li 옆으로 붙이고, margin rig,lef 40
+// li:last-child margin-right 0
+// a 글자색 pink
+//a:hover 글자색 deepskyblue
+nav {
+    background: khaki;
+    height: 100px;
+    #nav {
+        float: right;
+        li {
+            float: left;
+            margin: 0 40px;
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                color: pink;
+                &:hover {
+                    color: deepskyblue;
+                }
+            }
+        }
+    }
+}

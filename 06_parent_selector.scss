@@ -1,0 +1,31 @@
+//.list overflow
+// .list>li 옆으로 붙이기 여백 30 list-style none
+// .list>li:last-child margin-right 0
+// .list>li>.on a 글자색 초록
+// .btn 글자색 skyblue
+// .btn.active 글자색 빨강
+nav {
+    .list {
+        overflow: hidden;
+        li {
+            float: left;
+            margin: 30px;
+            list-style: none;
+            &:last-child {
+                margin-right: 0;
+            }
+            &.on {
+                a {
+                    color: green;
+                }
+            }
+        }
+    }
+}
+
+.btn {
+    color: skyblue;
+    &.active {
+        color: red;
+    }
+}

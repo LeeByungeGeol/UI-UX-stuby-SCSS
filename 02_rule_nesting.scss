@@ -1,0 +1,21 @@
+// section에 width 800 배경색
+// .list padding, overflow
+// .list>li float, margin
+// .list>li>a 글자색, 밑줄제거, 글자크기
+section {
+    width: 800px;
+    background-color: antiquewhite;
+    >.list {
+        padding: 20px;
+        overflow: hidden;
+        >li {
+            float: left;
+            margin: 20px;
+            >a {
+                color: pink;
+                text-decoration: underline;
+                font-size: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+// .wrap 배경색
+// .wrap>.box-small 글자크기 20 배경색
+// .wrap>.box-medium 글자크기 40 밑줄
+// .wrap>.box-large 글자 100 기울기
+.wrap {
+    background: skyblue;
+    .box {
+        &-small {
+            font-size: 20px;
+            background: pink;
+        }
+        &-medium {
+            font-size: 40px;
+            text-decoration: underline;
+        }
+        &-large {
+            // font-size: 100px;
+            // font-style: italic;
+            font: {
+                size: 100px;
+                style: italic;
+                weight: bolder;
+            }
+        }
+    }
+}

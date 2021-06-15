@@ -1,0 +1,21 @@
+nav .list {
+  overflow: hidden;
+}
+nav .list li {
+  float: left;
+  margin: 30px;
+  list-style: none;
+}
+nav .list li:last-child {
+  margin-right: 0;
+}
+nav .list li.on a {
+  color: green;
+}
+
+.btn {
+  color: skyblue;
+}
+.btn.active {
+  color: red;
+}
