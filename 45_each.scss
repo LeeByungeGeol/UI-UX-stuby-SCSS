@@ -1,0 +1,23 @@
+@import "common";
+
+// 클래스명을 배열에 저장하기
+$snsArr : (blog,facebook,instagram,twitter,youtube);
+
+.sns{
+    li{
+        float: left;
+        margin: 10px;
+        a{
+            display: block;
+            width: 35px;
+            height: 35px;
+        }
+    }
+    @each $i in $snsArr{
+        .#{$i}{
+            a{
+                background-image: url(../images/icon_#{$i}.png);
+            }
+        }
+    }
+}

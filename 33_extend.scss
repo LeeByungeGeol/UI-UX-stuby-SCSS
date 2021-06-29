@@ -1,0 +1,39 @@
+// box box-btn box-img 공통사항
+// 테두리 글자색 패딩 마진
+// 배경색은 다르게
+
+// mixin
+// @mixin text-style{
+//     border: 1px solid black;
+//     color: green;
+//     padding: 20px;
+//     margin: 10px;
+// }
+// #container{
+//     .box{
+//         @include text-style();
+//         background: skyblue;
+//     }
+//     .box-btn{
+//         @include text-style();
+//         background: pink;
+//     }
+//     .box-img{
+//         @include text-style();
+//         background: greenyellow;
+//     }
+// }
+.box{
+    border: 2px solid black;
+    color: tomato;
+    padding: 30px;
+    margin: 15px;
+}
+.box-btn{
+    @extend .box;
+    background: skyblue;
+}
+.box-img{
+    @extend .box;
+    background: green;
+}

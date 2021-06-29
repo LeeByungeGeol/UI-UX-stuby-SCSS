@@ -1,0 +1,24 @@
+p{
+    background:skyblue;
+    margin:10px;
+    // 첫번째 p 너비를 250px + 200px
+    &:first-of-type{
+        width:250px + 200px;
+    }
+    // 두번째는 250px - 50px;
+    &:nth-of-type(2){
+        width:250px - 50px;
+    }
+    &:last-of-type{
+        font-size:20px*2;
+    }
+}
+
+.box{
+    background:pink;
+    // width:600px/2;
+    font: 30px/100px "돋움";
+    // font:기울 두께 글자크기/줄간격 "글씨체",sans-serif;
+}
+// 나누기는 
+//font font-size/line-height

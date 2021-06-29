@@ -1,0 +1,29 @@
+// 너비, 높이, left, top, position 정보를 입력받아서
+// position absoulte이거나 fixed이면 입력받을 값을 적용하고, 그렇지 않으면 적용안함
+// 값 입력시 단위가 생략되었을 경우는 px을 붙여주고, 생략되지 않았을 경우에는 값이 그대로 적용
+@mixin boxPoistion($w,$h,$left,$top,$p:absolute){
+    @if($p==absolute or $p==fixed){
+        width: if(unitless($w),#{$w}px,$w);
+        height: if(unitless($h),#{$h}px,$h);
+        left: if(unitless($left),#{$left}px,$left);
+        top: if(unitless($top),#{$top}px,$top);
+    }
+    @else{
+        height: if(unitless($left),#{$left}px,$left);
+    }
+    position: $p;
+}
+
+div{
+    background-color: pink;
+    margin: 10px;
+}
+.box1{
+    @include boxPoistion(100px,50px,200px,200px);
+}
+.box2{
+    @include boxPoistion(600,100,500px,300px,fixed);
+}
+.box3{
+    @include boxPoistion(800px,200 ,10 ,400 ,relative);
+}

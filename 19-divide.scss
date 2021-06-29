@@ -1,0 +1,11 @@
+// box의 너비를 600px/2
+//높이 100px/2
+//글자크기는 15px= 10px + 10px/2
+.box{
+    $value:600px;
+
+    width:$value/2;
+    height:(100px/2);
+    background:pink;
+    font-size:10px + 10px/2;
+}

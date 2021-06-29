@@ -1,0 +1,17 @@
+// 확장한 내용이 포함된 요소를 다시 확장해서  사용하기
+// .box1 글자색, 배경색
+// .box2에는 .box1의 글자색, 배경색 모함하고, 글자크기, 두께
+// .box3,.box1의 글자색, 배경색, box2의 글자크기, 두께를 포함하고 스타일
+.box1{
+    color: pink;
+    background-color: purple;
+}
+.box2{
+    @extend .box1;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.box3{
+    @extend.box2;
+    font-style: italic;
+}

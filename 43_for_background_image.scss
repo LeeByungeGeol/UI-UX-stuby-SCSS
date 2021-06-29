@@ -1,0 +1,24 @@
+@import 'common';
+
+.event{
+    li{
+        width: 266px;
+        height: 266px;
+
+        a{
+            display: block;
+            height: 100%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        // eventBanner1.jpg~ eventBanner5.jpg
+        @for $i from 1 through 5{
+            &:nth-child(#{$i}){
+                a{
+                    background-image: url(../images/eventBanner#{$i}.jpg);
+                }
+            }
+        }
+    }
+}

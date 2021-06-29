@@ -1,0 +1,17 @@
+// .box1 글자색, 밑줄
+.box1{
+    color: purple;
+    text-decoration: underline;
+}
+// .box2 배경색, 글자크기
+.box2{
+    background-color: pink;
+    font-size: 50px;
+}
+
+// .box3 .box1의 글자색, 밑주르 box2의 배경색, 글가크기
+.box3{
+    // @extend .box1;
+    // @extend .box2;
+    @extend .box1, .box2;
+}

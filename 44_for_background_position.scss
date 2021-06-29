@@ -1,0 +1,30 @@
+@import 'common';
+
+.quickMenu{
+    overflow: hidden;
+
+    li{
+        float: left;
+        width: 70px;
+        height: 70px;
+
+        a{
+            display: block;
+            height: 100%;
+            background-image: url(../images/icon_quickmenu.png);
+        }
+        // li:nth-child(1) 1 a 0 0         ==>  $i* -70px ==> -70px + 70  , 0*-70
+        // li:nth-child(2) 2 a -70px 0     ==>  $i* -70px ==> -140px + 70 , 1*-70
+        // li:nth-child(3) 3 a -140px 0    ==>  $i* -70px ==> -210px + 70 , 2*-70
+        // li:nth-child(4) 4 a -210px 0    ==>  $i* -70px ==> -280px + 70 , 3*-70
+        @for $i from 1 through 4{
+            &:nth-child(#{$i}){
+                $j : $i -1;
+                a{
+                    background-position: -70px *$i+70px 0;
+                    // background-position: -70px *$j 0;
+                }
+            }
+        }
+    } 
+}
